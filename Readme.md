@@ -1,4 +1,4 @@
-Smart-Tree-Binary-Search with -std=C++17. Insert arithmetic data, if repeated data is not considered a binary tree. Check if is binary tree or not. Calculate the height.
+Smart-Tree-Binary-Search in C++ stantard library -std=C++17. Insert a number of nodes, each node will contain arithmetic data. In this example if Itś given repeated data, the tree is not considered a binary tree. Use the class to Check if It is a binary tree or not. Or to Calculate the height.
 
 # Example Input: 
 # 25

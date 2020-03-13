@@ -39,6 +39,7 @@ private:
 	bool insert_rcv(node_ptr& node, const Type_arithmetic& data);
 	int height(const node_ptr& root) const;
 	bool checkBST_deep_left_first(const node_ptr& node, Type_arithmetic& last_value) const;
+
 	inline Type_arithmetic type_minimum_number_f() const
 	{
 	   // Return the minimum number of the type using numeric_limits.
@@ -55,6 +56,7 @@ public:
 	BSTree():root(nullptr), real_counter(0){
 		static_assert( std::is_arithmetic< Type_arithmetic >::value , "Type parameter of this class must be an arithmetic type" );
 		// Otherwise check BST will not work. Since member function CheckBST make use of numeric_limits.
+
 	}
 
 	bool insert(const Type_arithmetic& data);

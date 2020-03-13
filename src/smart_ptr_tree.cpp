@@ -97,23 +97,6 @@ bool BSTree<Type_arithmetic>::checkBST() const
    }else return true;
 }
 
-template<typename Type_arithmetic>
-void measure_ticks( BSTree<Type_arithmetic>& myTree, std::function< int(BSTree<Type_arithmetic>&) > fnc_to_measure, const std::string str_msg ){
-	// Measure the time in ticks of the function( in BSTree ) given as a parameter. Good for comparing 2 different definitions.
-	using namespace std::chrono;
-
-	std::cout << str_msg << std::endl;
-	auto start = system_clock::now();
-	int height = fnc_to_measure(myTree);
-	auto end = system_clock::now();
-
-	// Calculating total ticks taken by the program:
-	int ticks_taken = (end - start).count();
-	std::cout << "Ticks taken by function is : " << std::fixed
-		<< ticks_taken;
-	std::cout << " ticks " << std::endl;
-	std::cout << "height " << height << std::endl;
-}
 
 template<typename Type_arithmetic>
 void measure_ticks( BSTree<Type_arithmetic>& myTree){
@@ -175,12 +158,6 @@ if(myTree.checkBST()){
 
 
 measure_ticks(myTree);
-
-std::function< int(BSTree<int>&) > algorithm_to_measure = &BSTree<int>::obtain_height;
-measure_ticks(myTree, algorithm_to_measure, "Measuring height...");
-
-// std::function< int(BSTree<int>&) > algorithm_to_measure = &BSTree<int>::obtain_height;
-// measure_ticks(myTree, algorithm_to_measure, "Measuring height...");
 
 return 0;
 }
